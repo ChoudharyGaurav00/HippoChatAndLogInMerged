@@ -1,0 +1,16 @@
+.chatWindow {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.top {
+  height: 7%;
+  border: outset;
+}
+.middle {
+  height: 70%;
+}
+.bottom {
+  height: 23%;
+}

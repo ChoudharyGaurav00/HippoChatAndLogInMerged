@@ -1,0 +1,38 @@
+<body>
+
+    <div class="logo-container">
+        <!-- selected1 -->
+        <img class="hippo-logo-image" src="../assets/hippoLogo.png" alt="hippoLogo">
+        <div class="jungleworks-logo-container">
+            <span style="font-family:Rubik,sans-serif;font-size: 14px;">Powered By</span>
+            <img class="jungleworks-logo-image" src="../assets/jungleworkslogo.svg" alt="jungleworkslogo">
+        </div>
+
+    </div>
+
+    <div class="signincontainer">
+        <div class="sign-in-innercontainer">
+
+            <h3 class="sign-in-h3">Sign in your account</h3>
+
+            <div class="signinform">
+                <form class="inputfld">
+                    <input #email type="email" class="inputfld" placeholder="Enter Email">
+                    <input type="text" class="inputfld" placeholder="Enter Password">
+                    <nav>
+                        <a routerLink="../forgotpassword">Forgot Password?</a>
+
+                    </nav>
+
+                    <button (click)="signinTry(email.value)" type="button" class="btn btn-primary">Sign In</button>
+
+                    <nav>
+
+                        <p> Don't have an account? <a routerLink="../signup">Sign Up</a> </p>
+                    </nav>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</body>

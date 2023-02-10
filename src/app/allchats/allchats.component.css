@@ -1,0 +1,102 @@
+.allChatsContainer {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow-y: scroll;
+  /* overflow-y: auto; */
+}
+.msgNum {
+  display: flex;
+  flex-direction: row;
+  padding: 16px 20px;
+}
+.msgNum:hover {
+  background-color: #4d7cfe1a;
+}
+.msg {
+  display: flex;
+  flex-direction: column;
+  margin-left: 3px;
+}
+.msgText {
+  overflow: hidden;
+  font-weight: 500;
+  color: #5a626a;
+  font-family: Rubik, sans-serif;
+  font-size: 13px;
+}
+.chatsHeader {
+  display: flex;
+  justify-content: center;
+  text-decoration-color: #16449b;
+  text-decoration: underline;
+  margin: 15px;
+}
+
+.bdgVisitor {
+  border-radius: 50%;
+  width: 80%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  color: white;
+  background-color: rgb(158, 157, 36);
+  aspect-ratio: 1;
+  text-transform: uppercase;
+}
+.bdgAgent {
+  /* height: 80%; */
+  border-radius: 50%;
+  width: 80%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  color: white;
+  background-color: rgb(38, 166, 154);
+  aspect-ratio: 1;
+}
+.customerLogo {
+  width: 13%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  aspect-ratio: 1;
+  margin-left: 10px;
+}
+.agentLogo {
+  width: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  aspect-ratio: 1;
+}
+.agentClass {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+u {
+  text-decoration: underline;
+  text-decoration-color: #16449b;
+}
+h6 {
+  font-size: 15px;
+  font-family: Rubik-Medium, sans-serif;
+  font-weight: bold;
+  text-transform: capitalize;
+  margin-bottom: 0;
+}
+
+.allChatsContainer::-webkit-scrollbar {
+  width: 5px;
+  height: 3px;
+  background-color: #fff; /* or add it to the track */
+}
+.allChatsContainer::-webkit-scrollbar-thumb {
+  background: #aaa;
+}
+
+.active {
+  background-color: #4d7cfe1a;
+  /* color: red; */
+}

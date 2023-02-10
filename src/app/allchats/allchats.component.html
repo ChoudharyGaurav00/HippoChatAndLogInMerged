@@ -1,0 +1,34 @@
+<div class="allChatsContainer">
+
+    <div class="chatsHeader">
+        <h6><u>My Chats</u> </h6>
+    </div>
+
+
+    <div *ngFor="let chat of chatsArr">
+
+        <div (click)="selectUser(chat.key)" class="msgNum  chatNumber{{chat.key}}"
+            [class.active]="chatService.selectedChatId==chat.key">
+
+            <div class="customerLogo">
+                <span class="bdgVisitor">{{chat.username[0]}}</span>
+            </div>
+
+            <div class="msg">
+                <div class="customer">
+                    <h6>{{chat.username}}</h6>
+                </div>
+                <div class="msgText">
+                    <p class="customerP">{{chat.messageArr[chat.messageArr.length-1].content}}</p>
+
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+
+</div>

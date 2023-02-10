@@ -1,0 +1,13 @@
+.parentContainer {
+  display: flex;
+  height: 100vh;
+}
+.leftSide {
+  width: 25%;
+}
+.rightSide {
+  width: 75%;
+  border: solid;
+  border-color: #f2f4f6;
+  box-shadow: inset 0px 0px 1px 1px grey;
+}

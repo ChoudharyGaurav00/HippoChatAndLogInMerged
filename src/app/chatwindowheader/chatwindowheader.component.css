@@ -1,0 +1,63 @@
+.btn {
+  margin: auto;
+  margin-right: 5px;
+  width: max-content;
+}
+.chatCreate {
+  display: flex;
+  align-items: center;
+  /* height: 100%; */
+}
+.headerContainer {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+}
+.headerLeft {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: 25%;
+}
+
+.headerRight {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.icons {
+  display: flex;
+}
+.icons * {
+  margin-right: 2px;
+}
+.bdgVisitor {
+  height: 80%;
+  border-radius: 50%;
+  width: 80%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  color: white;
+  text-transform: uppercase;
+  background-color: rgb(158, 157, 36);
+  /* aspect-ratio: 1; */
+}
+.visitorInfo {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  /* justify-content: space-around; */
+  overflow: hidden;
+  margin-left: 5px;
+  /* margin-top: 10px; */
+  padding-top: 6px;
+}
+.visitorLogo {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  aspect-ratio: 1;
+  margin-left: 7px;
+}

@@ -1,0 +1,43 @@
+<body>
+
+    <div class="logo-container" *ngIf="loginService.changeSelectorFlag">
+        <!-- selected1 -->
+        <img class="hippo-logo-image" src="../assets/hippoLogo.png" alt="hippoLogo">
+        <div class="jungleworks-logo-container">
+            <span style="font-family:Rubik,sans-serif;font-size: 14px;">Powered By</span>
+            <img class="jungleworks-logo-image" src="../assets/jungleworkslogo.svg" alt="jungleworkslogo">
+        </div>
+
+    </div>
+
+    <div class="container-registerpage">
+        <h1>Register your business</h1>
+        <p>with hippo</p>
+        <div class="signupformcontainer">
+
+            <form #signupform="ngForm" class="signupformclass" (ngSubmit)="userSignUp(signupform.value)">
+
+                <input type="text" class="inputfld" placeholder="Enter Business Name" name="business-name" ngModel>
+                <input type="text" class="inputfld" placeholder="Enter Contact Name" name="contactname" ngModel>
+                <input type="email" class="inputfld" placeholder="Enter Email" name="emailid" ngModel>
+                <input type="text" class="inputfld" placeholder="Enter Passsword" name="password" ngModel>
+                <input type="text" class="inputfld" placeholder="Enter Mobile Number" name="mobilenumber" ngModel>
+
+                <input type="checkbox" id="agreementbox" name="agreement" value="agree">
+                <label for="agreementbox"> I agree to your Terms of Services and Privacy Policy</label>
+
+
+
+
+                <button (click)="userSignUp(signupform.value)" type="button" class="btn btn-primary">Sign Up</button>
+                <nav>
+
+                    <p>Already have an account? <a routerLink="..">Sign in </a></p>
+                </nav>
+
+
+            </form>
+        </div>
+
+    </div>
+</body>

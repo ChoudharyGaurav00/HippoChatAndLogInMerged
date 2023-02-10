@@ -1,0 +1,93 @@
+<!-- {{chatservice.chatArr[chatservice.selectedChatId].messageArr[0].content}} -->
+<!-- {{chatservice.selectedChatId}} -->
+<!-- {{chatservice.chatArr[chatservice.selectedChatId].messageArr[0].senderType}} -->
+
+
+
+<div class="msgContainer">
+    <!-- Trying Dynamic -->
+    <div class="dynamic-chats-container">
+        <div class="loopingContainer msgnum  "
+            *ngFor="let temp of   chatservice.chatArr[chatservice.selectedChatId].messageArr">
+
+            <div class="choosingtype" *ngIf="(temp.senderType==0);then  firstBlock;else secondBlock"></div>
+            <ng-template #firstBlock>
+                <div class="visitorLogo">
+                    <span class="bdgVisitor">{{chatservice.chatArr[chatservice.selectedChatId].username[0]}}</span>
+                </div>
+
+
+                <div class="msg">
+                    <div class="customer">
+                        <h6>{{chatservice.chatArr[chatservice.selectedChatId].username}}, {{temp.time| date:
+                            'shortTime'}}</h6>
+                    </div>
+                    <div class="msgText msgCustomer">
+                        <p class="customerP">{{temp.content}}</p>
+
+                    </div>
+                </div>
+            </ng-template>
+            <ng-template #secondBlock>
+                <div class="msgnum agentClass">
+
+                    <div class="agentLogo">
+                        <span class="bdgAgent">A</span>
+                    </div>
+
+
+                    <div class="msg msgA">
+                        <div class="agentInitials">
+                            <h6>Agent, {{temp.time| date: 'shortTime' }} </h6>
+                        </div>
+                        <div class="msgText">
+                            <p class="customerA">{{temp.content}}</p>
+
+                        </div>
+                    </div>
+                </div>
+            </ng-template>
+
+        </div>
+
+    </div>
+
+    <!-- MSG 1 -->
+    <!-- <div class="msgnum firstMsg">
+
+            <div class="visitorLogo">
+                <span class="bdgVisitor">V</span>
+            </div>
+        
+        
+        <div class="msg" >
+            <div class="customer">
+                <h6>demo-visitor  1</h6>
+            </div>
+            <div class="msgText msgCustomer">
+                <p class="customerP">msg 1</p>
+
+            </div>
+        </div>
+    </div> -->
+    <!-- MSG 2 -->
+    <!-- <div class="msgnum agentClass">
+
+            <div class="agentLogo">
+                <span class="bdgAgent">A</span>
+            </div>
+        
+        
+        <div class="msg msgA" >
+            <div class="agentInitials">
+                <h6>Agent 1</h6>
+            </div>
+            <div class="msgText">
+                <p class="customerA">Welcome tocheckin-billing3Before we go ahead, Could you please share your email address, So that we can stay connected.</p>
+
+            </div>
+        </div>
+    </div> -->
+
+
+</div>

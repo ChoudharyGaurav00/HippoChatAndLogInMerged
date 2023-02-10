@@ -1,0 +1,19 @@
+<div class="msgContainer">
+    <!-- selected chat {{chatservice.chatid}} -->
+    <div class="msgPart" contenteditable="true">
+        <!-- {{chatservice.chatid}} -->
+        <div #messageInput class=" msgDiv" contentEditable=true data-ph="Type a msg"></div>
+        <style>
+            [contentEditable=true]:empty:before {
+                content: attr(data-ph)
+            }
+        </style>
+    </div>
+    <div class="sendType">
+
+        <button (click)="agentChat(messageInput)" class="btn btn-primary">Send as Agent</button>
+        <button (click)="userChat(messageInput)" class="btn btn-primary">Send as customer</button>
+    </div>
+
+
+</div>
